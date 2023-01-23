@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- function abc({protocol, clientIP, clientPort, ...env}) {
+        console.log(clientIP);
+        console.log(clientPort);
+    };
+    function func({clientIP,clientPort, ...env}) {
+        console.log(clientIP);
+        console.log(clientPort);
+    }; -->
+</head>
+
+<body>
+    <script>
+        function func({...env}) {
+        console.log(env.clientIP);
+        console.log(env.clientPort);
+    };
+        env = {
+            protocol: 'http',
+            clientIP: '127.0.0.1',
+            clientPort: 3000,
+            dburl: 'mongodburl',
+            serverIP: '127.0.0.1',
+            serverPort: 5000,
+            log: true
+        }
+        func(env)
+    </script>
+</body>
+
+</html>
